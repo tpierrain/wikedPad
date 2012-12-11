@@ -7,7 +7,7 @@
     <ProjectGuid>{68C103D8-6282-439B-9AA4-F78C5FB010FA}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>wikedPad</RootNamespace>
+    <RootNamespace>WikedPad</RootNamespace>
     <AssemblyName>wikedPad</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

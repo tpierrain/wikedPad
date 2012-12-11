@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A09D1112-5CEA-40DE-9528-775CF0EB9A56}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WikedPad.Tests</RootNamespace>
+    <AssemblyName>wikedPad.Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="nunit.framework">
+      <HintPath>..\packages\NUnit.2.6.2\lib\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="SiteManagerTests.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Settings.StyleCop" />
+    <None Include="wikedSample\src\site\markdown\AcceptanceTestsScenarii.md.vm" />
+    <None Include="wikedSample\src\site\markdown\BusinessStakeHolders.md.vm" />
+    <None Include="wikedSample\src\site\markdown\ContactsAndLicenses.md.vm" />
+    <None Include="wikedSample\src\site\markdown\DevEnvironmentSetup.md.vm" />
+    <None Include="wikedSample\src\site\markdown\DevGuidelines.md.vm" />
+    <None Include="wikedSample\src\site\markdown\DomainModel.md.vm" />
+    <None Include="wikedSample\src\site\markdown\HowToDev.md.vm" />
+    <None Include="wikedSample\src\site\markdown\HowToTeam.md.vm" />
+    <None Include="wikedSample\src\site\markdown\index.md.vm" />
+    <None Include="wikedSample\src\site\markdown\KnowledgeManagementGuide.md.vm" />
+    <None Include="wikedSample\src\site\markdown\ProjectFaq.md.vm" />
+    <None Include="wikedSample\src\site\markdown\ProjectOverviewAndMilestones.md.vm" />
+    <None Include="wikedSample\src\site\markdown\SampleMarkdownPage.md.vm" />
+    <None Include="wikedSample\src\site\markdown\TeamValuesAndPractices.md.vm" />
+    <None Include="wikedSample\src\site\markdown\Troubleshootings.md.vm" />
+    <None Include="wikedSample\src\site\markdown\UbiquitousLanguage.md.vm" />
+    <None Include="wikedSample\src\site\markdown\WelcomeGuide.md.vm" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\wikedPad.Core\wikedPad.Core.csproj">
+      <Project>{e9424e47-68ec-4605-98b3-ea2f9f1cbdf3}</Project>
+      <Name>wikedPad.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="wikedSample\pom.xml" />
+    <Content Include="wikedSample\src\site\resources\BannerImage.jpg" />
+    <Content Include="wikedSample\src\site\resources\forbidden.gif" />
+    <Content Include="wikedSample\src\site\resources\information.gif" />
+    <Content Include="wikedSample\src\site\resources\redArrow.jpg" />
+    <Content Include="wikedSample\src\site\resources\the-wire.jpg" />
+    <Content Include="wikedSample\src\site\resources\wiked.gif" />
+    <Content Include="wikedSample\src\site\site.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
