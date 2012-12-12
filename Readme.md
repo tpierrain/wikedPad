@@ -1,9 +1,9 @@
 About wiked!Pad
 ===============
 *author:* thomas@pierrain.net
-
 *date:* December 12th 2012
 
+**Disclaimer: wiked!Pad has just been created and is not usable yet. Keep in touch!**
 
 [wiked!](https://github.com/tpierrain/wiked) is a nice web site template to be used with maven in order to transform markdown files into html ones. wiked! aims to keep together, what varies together (source code, documentation, etc).
 
