@@ -2,6 +2,7 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.IO;
     using System.Linq;
     using System.Text;
     using System.Threading.Tasks;
@@ -11,16 +12,28 @@
     [TestFixture]
     public class WikedSiteTemplateTests
     {
+        private const string WikedTestSiteBaseUri = @"../../wikedSample";
+
         [Test]
-        public void RetrieveAllMarkdownFiles()
+        public void RetrieveAllRootMarkdownFiles()
         {
-            var workingDirUri = @"../../wikedSample";
+            var siteTemplate = new WikedSiteTemplate(WikedTestSiteBaseUri);
+            var numberOfRootMarkdownFilesOrDirectories = 18;
 
-            var siteTemplate = new WikedSiteTemplate(workingDirUri);
-            
-            Assert.AreEqual(17, siteTemplate.MarkdownFileSystemInfo.Length);
+            Assert.AreEqual(numberOfRootMarkdownFilesOrDirectories, siteTemplate.MarkdownFileSystemInfo.Length);
 
-            // TODO: handle subdirectories
+            FileSystemHelper.TraceFileSystemInfoAndSubContent(siteTemplate.MarkdownFileSystemInfo);
+        }
+
+        [Test]
+        public void RetrieveAllRootAlmostPlainTextFiles()
+        {
+            var siteTemplate = new WikedSiteTemplate(WikedTestSiteBaseUri);
+            var numberOfRootAptFilesOrDirectories = 1;
+
+            Assert.AreEqual(numberOfRootAptFilesOrDirectories, siteTemplate.AptFileSystemInfo.Length);
+
+            FileSystemHelper.TraceFileSystemInfoAndSubContent(siteTemplate.AptFileSystemInfo);
         }
     }
 }

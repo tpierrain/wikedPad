@@ -9,10 +9,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "wikedPad.Core", "wikedPad.C
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{96B602AC-36E6-4A3D-BE9F-851B0E5F3284}"
 	ProjectSection(SolutionItems) = preProject
-		BackLog.txt = BackLog.txt
+		BackLog.md = BackLog.md
+		DevDoD.md = DevDoD.md
 		Readme.md = Readme.md
 		Settings.StyleCop = Settings.StyleCop
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "wikedPad.AcceptanceTests", "wikedPad.AcceptanceTests\wikedPad.AcceptanceTests.csproj", "{7DD9B566-8939-4EC3-9AC4-47B9A310DA32}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -32,8 +35,15 @@ Global
 		{E9424E47-68EC-4605-98B3-EA2F9F1CBDF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E9424E47-68EC-4605-98B3-EA2F9F1CBDF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E9424E47-68EC-4605-98B3-EA2F9F1CBDF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DD9B566-8939-4EC3-9AC4-47B9A310DA32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DD9B566-8939-4EC3-9AC4-47B9A310DA32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DD9B566-8939-4EC3-9AC4-47B9A310DA32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DD9B566-8939-4EC3-9AC4-47B9A310DA32}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		EnterpriseLibraryConfigurationToolBinariesPath = packages\Unity.2.1.505.2\lib\NET35
 	EndGlobalSection
 EndGlobal

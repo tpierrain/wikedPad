@@ -11,8 +11,8 @@
     /// </summary>
     public class WikedSiteTemplate
     {
+        private const string RootSiteTemplateDirectory = @"src\site\";
         private string workingDirRootUri;
-        private string markdownRootDirectory;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="WikedSiteTemplate" /> class.
@@ -27,17 +27,30 @@
                 throw new InvalidOperationException("Could not find the pom.xml file for this wiked! site.");
             }
 
-            this.markdownRootDirectory = Path.Combine(this.workingDirRootUri, @"src\site\markdown");
-            DirectoryInfo directoryInfo = new DirectoryInfo(this.markdownRootDirectory);
-            this.MarkdownFileSystemInfo = directoryInfo.GetFileSystemInfos();
+            this.MarkdownFileSystemInfo = SetupFileSystemInfo(this.workingDirRootUri, "markdown");
+            this.AptFileSystemInfo = SetupFileSystemInfo(this.workingDirRootUri, "apt");
         }
 
         /// <summary>
-        /// Gets the markdown files of this wiked! site template.
+        /// Gets the markdown files and related directories of this wiked! site template.
         /// </summary>
         /// <value>
-        /// The markdown files of this wiked! site template.
+        /// The markdown files of this wiked! site template and related directories.
         /// </value>
         public FileSystemInfo[] MarkdownFileSystemInfo { get; private set; }
+
+        /// <summary>
+        /// Gets the APT files and related directories of this wiked! site template.
+        /// </summary>
+        /// <value>
+        /// The APT files of this wiked! site template and related directories.
+        /// </value>
+        public FileSystemInfo[] AptFileSystemInfo { get; private set; }
+
+        private static FileSystemInfo[] SetupFileSystemInfo(string workingDirRootUri, string specificFileTypedirectoryName)
+        {
+            var specificFileTypeRootDirectory = Path.Combine(workingDirRootUri, RootSiteTemplateDirectory + specificFileTypedirectoryName);
+            return new DirectoryInfo(specificFileTypeRootDirectory).GetFileSystemInfos();
+        }
     }
 }
