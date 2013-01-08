@@ -7,7 +7,7 @@
     using System.Text;
 
     /// <summary>
-    /// wiked! site template. Contains Markdown and Resource files.
+    /// wiked! site template. Contains Markdown, APT, and Resource files.
     /// </summary>
     public class WikedSiteTemplate
     {
