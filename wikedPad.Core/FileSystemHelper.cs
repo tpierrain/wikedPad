@@ -15,7 +15,7 @@
         /// Traces the content of a file system info array, including its sub content.
         /// </summary>
         /// <param name="fileSystemInfos">The file system info.</param>
-        public static void TraceFileSystemInfoAndSubContent(FileSystemInfo[] fileSystemInfos)
+        public static void TraceFileSystemInfoAndSubContent(IEnumerable<FileSystemInfo> fileSystemInfos)
         {
             foreach (var fileSystemInfo in fileSystemInfos)
             {

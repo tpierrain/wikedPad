@@ -12,7 +12,7 @@
     public class WikedSiteTemplate
     {
         private const string RootSiteTemplateDirectory = @"src\site\";
-        private string workingDirRootUri;
+        private readonly string workingDirRootUri;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="WikedSiteTemplate" /> class.

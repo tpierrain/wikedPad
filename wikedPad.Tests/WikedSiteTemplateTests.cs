@@ -18,9 +18,9 @@
         public void RetrieveAllRootMarkdownFiles()
         {
             var siteTemplate = new WikedSiteTemplate(WikedTestSiteBaseUri);
-            var numberOfRootMarkdownFilesOrDirectories = 18;
+            const int NumberOfRootMarkdownFilesOrDirectories = 18;
 
-            Assert.AreEqual(numberOfRootMarkdownFilesOrDirectories, siteTemplate.MarkdownFileSystemInfo.Length);
+            Assert.AreEqual(NumberOfRootMarkdownFilesOrDirectories, siteTemplate.MarkdownFileSystemInfo.Length);
 
             FileSystemHelper.TraceFileSystemInfoAndSubContent(siteTemplate.MarkdownFileSystemInfo);
         }
@@ -29,9 +29,9 @@
         public void RetrieveAllRootAlmostPlainTextFiles()
         {
             var siteTemplate = new WikedSiteTemplate(WikedTestSiteBaseUri);
-            var numberOfRootAptFilesOrDirectories = 1;
+            const int NumberOfRootAptFilesOrDirectories = 1;
 
-            Assert.AreEqual(numberOfRootAptFilesOrDirectories, siteTemplate.AptFileSystemInfo.Length);
+            Assert.AreEqual(NumberOfRootAptFilesOrDirectories, siteTemplate.AptFileSystemInfo.Length);
 
             FileSystemHelper.TraceFileSystemInfoAndSubContent(siteTemplate.AptFileSystemInfo);
         }
